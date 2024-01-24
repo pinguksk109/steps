@@ -12,7 +12,7 @@ public class StepRequest {
   private String date;
   @NotBlank(message = "歩数を入力してください")
   private Integer steps;
-  @NotEmpty(message = "空文字は許可していません。")
+  @NotEmpty(message = "空文字は許可していません")
   private String memo;
   
 }

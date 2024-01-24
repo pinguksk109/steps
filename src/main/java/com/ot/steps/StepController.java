@@ -16,7 +16,7 @@ import com.ot.steps.domain.request.StepRequestDto;
 
 @RestController
 @RequestMapping("/")
-public class stepController {
+public class StepController {
 
   @Autowired
   private StepService stepService;

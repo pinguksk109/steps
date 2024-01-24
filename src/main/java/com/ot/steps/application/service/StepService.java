@@ -20,7 +20,7 @@ public class StepService {
     try {
       stepRepository.saveStep(dto);
     } catch (Exception e) {
-      throw new Exception("Serviceクラスでエラーが発生しました");
+      throw new Exception("Serviceクラスでエラーが発生しました", e);
     }
   }
   
