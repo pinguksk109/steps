@@ -45,5 +45,18 @@ class StepControllerTest extends StepController {
         .andReturn();
 
   }
+  
+  @Test
+  public void POST_saveStep_日付が入力されていない場合_HTTPステータスコード400を返すこと() throws Exception {
+    String requestBody = "{}";
+    
+    mvc.perform(MockMvcRequestBuilders
+        .post("/person_id/1")
+        .contentType(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON)
+        .content(requestBody))
+      .andExpect(MockMvcResultMatchers.status().isBadRequest())
+      .andReturn();
+  }
 
 }
